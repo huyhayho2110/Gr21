@@ -6,4 +6,4 @@ CREATE TABLE Tourament(
 );
 
 INSERT INTO (Name_tourament, Total_prizre, Date_start, Date_end, Location)
-VALUES ('League of legends: Worlds championship 2022', 2022-09-30, 2022-11-06, 'New York');
+VALUES ('League of legends: Worlds championship 2022', '2022-09-30', '2022-11-06', 'New York');
