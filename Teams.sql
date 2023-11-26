@@ -3,8 +3,7 @@ CREATE TABLE Teams (
     Name_Teams VARCHAR(50) NOT NULL,
     Short_Name VARCHAR(50),
     AREA VARCHAR(50),
-    Country VARCHAR(50),
-    INDEX idx_Name_Teams (Name_Teams)  
+    Country VARCHAR(50)
 );
 INSERT INTO Teams(ID_Teams, Name_Teams, Short_Name, AREA, Country)
 VALUE 
