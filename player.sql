@@ -1,8 +1,7 @@
-USE lol_world_2022;
 CREATE TABLE player_stats (
-    id INT AUTO_INCREMENT,
-    player VARCHAR(50) NOT NULL,
-    team VARCHAR(50) NOT NULL,
+    ID_players INT PRIMARY KEY,
+    Name_Players VARCHAR(50) NOT NULL,
+    Name_Teams VARCHAR(50) NOT NULL,
     position ENUM('Top','Jungle','Middle','ADC','Support'),
     gold_per_minute DECIMAL(4,2) NOT NULL,
     winrate VARCHAR(10) NOT NULL,
@@ -29,7 +28,7 @@ CREATE TABLE player_stats (
     wards_per_minute DECIMAL(4,2) NOT NULL,
     control_wards_per_minute DECIMAL(4,2) NOT NULL,
     wards_cleared_per_minute DECIMAL(4,2) NOT NULL,
-    PRIMARY KEY (id)
+    FOREIGN KEY (Name_Teams) REFERENCES Teams(Name_Teams)
 );
 
 INSERT INTO player_stats (player, team, position, gold_per_minute, winrate, counter_pickrate, kills, deaths, assists, kda, kp, kill_share, share_team_deaths, first_blood_rate, gold_diff_10, xp_diff_10, cs_diff_10, cspm, share_team_deaths_15, damage_per_minute, share_damage, share_team_damage_15, average_gold_per_minute, gold_share, neutral_objectives_stolen, wards_per_minute, control_wards_per_minute, wards_cleared_per_minute) VALUES
