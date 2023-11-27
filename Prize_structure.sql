@@ -1,8 +1,8 @@
 CREATE TABLE Prize_structure (
-  Ranking INT,
-  Prize_money DECIMAL (10,4),
-  Prize_percentage DECIMAL (4,2),
-  Unit_money VARCHAR (50),
+  Ranking INT NOT NULL,
+  Prize_money DECIMAL (10,4) NOT NULL,
+  Prize_percentage DECIMAL (4,2) NOT NULL,
+  Unit_money VARCHAR (50) NOT NULL,
   FOREIGN KEY (Unit_money) REFERENCES Tourament(Unit_money)
 );
 
