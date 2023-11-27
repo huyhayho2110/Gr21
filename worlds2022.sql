@@ -1,6 +1,4 @@
-
--- Create a table to store the team information
-CREATE TABLE teams (
+CREATE TABLE Teams_stats (
     Team_ID INT PRIMARY KEY,
     team VARCHAR(255),
     Short_Name VARCHAR(255),
