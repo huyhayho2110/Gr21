@@ -1,13 +1,13 @@
 CREATE TABLE coaches (
-  id int auto_increment,
-  coach_name VARCHAR(50) NOT NULL,
+  Id_coach int auto_increment,
+  Coach_name VARCHAR(50) NOT NULL,
   ID_Teams int NOT NULL,
   nick_name VARCHAR(50) NOT NULL,
-  PRIMARY KEY (id),
+  PRIMARY KEY (Id_coach),
   FOREIGN KEY (ID_Teams) REFERENCES Teams(ID_Teams)
 );
 
-INSERT INTO coaches (coach_name, ID_Teams, nick_name) VALUES
+INSERT INTO coaches (Coach_name, ID_Teams, nick_name) VALUES
 ('Jang Nu-ri', 13, 'Cain'),
 ('Nick De Cesare', 14, 'LS'),
 ('Chen Chen-Chi', 18, 'Achie'),
