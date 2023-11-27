@@ -1,9 +1,9 @@
 CREATE TABLE Teams (
     ID_Teams INT PRIMARY KEY,
     Name_Teams VARCHAR(50) NOT NULL,
-    Short_Name VARCHAR(50),
-    AREA VARCHAR(50),
-    Country VARCHAR(50)
+    Short_Name VARCHAR(50) NOT NULL,
+    AREA VARCHAR(50) NOT NULL,
+    Country VARCHAR(50) NOT NULL,
     INDEX idx_Name_Teams (Name_teams)
 );
 INSERT INTO Teams(ID_Teams, Name_Teams, Short_Name, AREA, Country)
