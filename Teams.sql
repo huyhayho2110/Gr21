@@ -17,7 +17,7 @@ VALUE
 (7, 'DWG KIA', 'DK', 'LCK', 'Korea'),
 (8, 'Dragon X', 'DRX', 'LCK', 'Korea'),
 (9, 'G2 Esports', 'G2', 'LEC', 'Europe'),
-(10, 'Rogue', 'Rouge', 'LEC', 'Europe'),
+(10, 'Rogue', 'RGE', 'LEC', 'Europe'),
 (11, 'Fnatic', 'FNC', 'LEC', 'Europe'),
 (12, 'MAD Lion', 'MAD', 'LEC', 'Europe'),
 (13, '100 Thieves', '100', 'LCS', 'North America'),
