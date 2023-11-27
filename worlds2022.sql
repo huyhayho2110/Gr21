@@ -1,9 +1,9 @@
 CREATE TABLE Teams_stats (
     Team_ID INT PRIMARY KEY,
     Name_Teams VARCHAR(50) NOT NULL,
-    Short_Name VARCHAR(255),
-    team_religion VARCHAR(255),
-    Country VARCHAR(255),
+    Short_Name VARCHAR(50),
+    AREA VARCHAR(50),
+    Country VARCHAR(50),
     games_played INT,
     wins INT,
     loses INT,
