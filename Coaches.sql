@@ -1,4 +1,4 @@
-CREATE TABLE coaches (
+CREATE TABLE Coaches (
   Id_coach int auto_increment,
   Coach_name VARCHAR(50) NOT NULL,
   ID_Teams int NOT NULL,
