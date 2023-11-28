@@ -7,7 +7,7 @@ CREATE TABLE Players_information (
   CONSTRAINT UQ_Team_Player UNIQUE (Player_ID, Name_player)
 ) COMMENT='Table storing information about players.';
 
-INSERT INTO Players_information(Name_players, Name_teams, Position)
+INSERT INTO Players_information(Name_player, Name_team, Position)
 VALUES 
   ('369','JD Gaming','Top'),
   ('Abbedagge','100 Thieves','Middle'),
