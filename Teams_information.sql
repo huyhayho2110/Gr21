@@ -1,12 +1,11 @@
 CREATE TABLE Teams_information (
-    ID_Teams INT PRIMARY KEY,
-    Name_Teams VARCHAR(50) NOT NULL,
-    Short_Name VARCHAR(50) NOT NULL,
-    AREA VARCHAR(50) NOT NULL,
-    Country VARCHAR(50) NOT NULL,
-    INDEX idx_Name_Teams (Name_teams)
-);
-INSERT INTO Teams_information(ID_Teams, Name_Teams, Short_Name, AREA, Country)
+  Team_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  Name_team VARCHAR(50) UNIQUE NOT NULL,
+  Short_Name VARCHAR(50) NOT NULL,
+  AREA VARCHAR(50) NOT NULL,
+  Country VARCHAR(50) NOT NULL
+) COMMENT='Table storing information about teams.';
+INSERT INTO Teams_information(Team_ID, Name_Team, Short_Name, AREA, Country)
 VALUE 
 (1, 'Top Esports', 'TES', 'LPL', 'China'), 
 (2, 'JD Gaming', 'JDG', 'LPL', 'China'),
