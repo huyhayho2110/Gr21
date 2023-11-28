@@ -3,7 +3,7 @@ CREATE TABLE Teams_ranking (
   Ranking_position INT,
   ID_Teams INT,
   PRIMARY KEY (id),
-  FOREIGN KEY (ID_Teams) REFERENCES Teams(ID_Teams)  
+  FOREIGN KEY (ID_Teams) REFERENCES Teams_information(ID_Teams)  
 );
 
 INSERT INTO Teams_ranking (place, ID_Teams) VALUES
