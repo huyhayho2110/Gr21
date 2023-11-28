@@ -1,6 +1,6 @@
-CREATE TABLE place_result (
-  id INT auto_increment,
-  place INT,
+CREATE TABLE Team_ranking (
+  ID_ranking INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  Ranking_position INT,
   ID_Teams INT,
   PRIMARY KEY (id),
   FOREIGN KEY (ID_Teams) REFERENCES Teams(ID_Teams)  
