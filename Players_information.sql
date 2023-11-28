@@ -90,5 +90,4 @@ VALUES
   ('Yagao','JD Gaming','Middle'),
   ('Zeka','DRX','Middle'),
   ('Zeus','Telecom 1','Top'),
-  ('Zven','Cloud9','Support')
-;
+  ('Zven','Cloud9','Support');
