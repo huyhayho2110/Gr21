@@ -6,7 +6,7 @@ CREATE TABLE Teams_ranking (
   CHECK (Ranking_position >= 1)
 ) COMMENT='Table storing ranking information for teams.';
 
-INSERT INTO Teams_ranking (place, ID_Teams) VALUES
+INSERT INTO Teams_ranking (Ranking_position, Team_ID) VALUES
 (1,8),
 (2,5),
 (3,2),
