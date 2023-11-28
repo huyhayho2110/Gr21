@@ -1,11 +1,11 @@
 CREATE TABLE Coaches (
-  Id_coach int auto_increment,
+  Coach_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   Coach_name VARCHAR(50) NOT NULL,
-  ID_Teams int NOT NULL,
-  nick_name VARCHAR(50) NOT NULL,
-  PRIMARY KEY (Id_coach),
-  FOREIGN KEY (ID_Teams) REFERENCES Teams_information(ID_Teams)
-);
+  Team_ID INT UNSIGNED NOT NULL,
+  Nick_name VARCHAR(50) NOT NULL,
+  FOREIGN KEY (Team_ID) REFERENCES Teams_information(Team_ID),
+  CONSTRAINT UQ_Team_Coach UNIQUE (Team_ID, Coach_name)
+) COMMENT='Table storing information about coaches.';
 
 INSERT INTO Coaches (Coach_name, ID_Teams, nick_name) VALUES
 ('Jang Nu-ri', 13, 'Cain'),
