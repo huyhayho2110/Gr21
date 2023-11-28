@@ -28,7 +28,7 @@ CREATE TABLE Teams_stats (
     wards_per_minute FLOAT NOT NULL,
     control_wards_per_minute FLOAT NOT NULL,
     wards_cleared_per_minute FLOAT NOT NULL,
-    FOREIGN KEY (ID_Teams) REFERENCES Teams(ID_Teams)
+    FOREIGN KEY (ID_Teams) REFERENCES Teams_information(ID_Teams)
 );
 
 
