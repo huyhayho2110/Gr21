@@ -1,4 +1,4 @@
-CREATE TABLE Team_ranking (
+CREATE TABLE Teams_ranking (
   ID_ranking INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   Ranking_position INT,
   ID_Teams INT,
@@ -6,7 +6,7 @@ CREATE TABLE Team_ranking (
   FOREIGN KEY (ID_Teams) REFERENCES Teams(ID_Teams)  
 );
 
-INSERT INTO place_result (place, ID_Teams) VALUES
+INSERT INTO Teams_ranking (place, ID_Teams) VALUES
 (1,8),
 (2,5),
 (3,2),
