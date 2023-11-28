@@ -1,4 +1,4 @@
-CREATE TABLE GameResults (
+CREATE TABLE Game_results (
   ID_result INT AUTO_INCREMENT PRIMARY KEY,
   ID_match INT UNSIGNED,
   ID_team_winning INT UNSIGNED,
