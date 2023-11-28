@@ -10,7 +10,7 @@ CREATE TABLE GameResults (
   FOREIGN KEY (ID_team_losing) REFERENCES Teams_information(Team_ID)
 ) COMMENT='Table storing game results.';
 
-INSERT INTO GameResults (ID_result, ID_match, ID_team_winning, ID_team_losing, Winning_score, Losing_score)
+INSERT INTO GameResults (ID_match, ID_team_winning, ID_team_losing, Winning_score, Losing_score)
 values
 (1, 11, 14, 1, 0),
 (2, 5, 3, 1, 0),
