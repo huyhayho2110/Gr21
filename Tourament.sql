@@ -1,3 +1,11 @@
+DROP database IF EXISTS lol_2022;
+
+CREATE database IF NOT EXISTS lol_2022;
+
+USE lol_2022;
+
+SET FOREIGN_KEY_CHECKS=0;
+
 CREATE TABLE Tourament(
   Name_tourament VARCHAR (255) PRIMARY KEY,
   Date_start DATE NOT NULL,
