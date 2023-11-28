@@ -4,7 +4,7 @@ CREATE TABLE Coaches (
   ID_Teams int NOT NULL,
   nick_name VARCHAR(50) NOT NULL,
   PRIMARY KEY (Id_coach),
-  FOREIGN KEY (ID_Teams) REFERENCES Teams(ID_Teams)
+  FOREIGN KEY (ID_Teams) REFERENCES Teams_information(ID_Teams)
 );
 
 INSERT INTO Coaches (Coach_name, ID_Teams, nick_name) VALUES
