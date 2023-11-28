@@ -7,7 +7,7 @@ CREATE TABLE Coaches (
   CONSTRAINT UQ_Team_Coach UNIQUE (Team_ID, Coach_name)
 ) COMMENT='Table storing information about coaches.';
 
-INSERT INTO Coaches (Coach_name, ID_Teams, nick_name) VALUES
+INSERT INTO Coaches (Coach_name, Team_ID, nick_name) VALUES
 ('Jang Nu-ri', 13, 'Cain'),
 ('Nick De Cesare', 14, 'LS'),
 ('Chen Chen-Chi', 18, 'Achie'),
