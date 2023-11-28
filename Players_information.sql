@@ -3,5 +3,5 @@ CREATE TABLE Players_information (
   Name_teams VARCHAR(50) NOT NULL,
   Name_players VARCHAR (50) NOT NULL,
   Nick_name VARCHAR (50) NOT NULL,
-  
+  FOREIGN KEY Name_teams 
 );
