@@ -7,7 +7,7 @@ CREATE TABLE Coaches (
   FOREIGN KEY (ID_Teams) REFERENCES Teams(ID_Teams)
 );
 
-INSERT INTO coaches (Coach_name, ID_Teams, nick_name) VALUES
+INSERT INTO Coaches (Coach_name, ID_Teams, nick_name) VALUES
 ('Jang Nu-ri', 13, 'Cain'),
 ('Nick De Cesare', 14, 'LS'),
 ('Chen Chen-Chi', 18, 'Achie'),
