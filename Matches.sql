@@ -1,18 +1,19 @@
-Create table Matches (
-ID_match INT auto_increment primary key, 
-Date date, 
-ID_team1 int,
-Result varchar(10),
-ID_team2 int,
-Location varchar(255),
-foreign key (ID_team1) references Teams(ID_team),
-foreign key (ID_team2) references Teams(ID_team),
-foreign key (Location) references Tourament(Location);
-);
+CREATE TABLE Matches (
+  ID_match INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  Date DATE,
+  ID_team1 INT UNSIGNED,
+  Result VARCHAR(10),
+  ID_team2 INT UNSIGNED,
+  Location VARCHAR(255),
+  FOREIGN KEY (ID_team1) REFERENCES Teams(Team_ID),
+  FOREIGN KEY (ID_team2) REFERENCES Teams(Team_ID),
+  FOREIGN KEY (Location) REFERENCES Tournament(Location)
+) COMMENT='Table storing information about matches.';
+INSERT INTO Matches (Date, ID_team1, Result, ID_team2)
 
 INSERT INTO Matches (Date, ID_team1, Result, ID_team2, Location)
 values
--- table A(lượt đi + lượt về)
+-- table A (first leg + return leg)
 ('2022-10-08', 14, '0-1', 11),
 ('2022-10-08', 5, '1-0', 3),
 ('2022-10-09', 11, '1-0', 5),
@@ -26,7 +27,7 @@ values
 ('2022-10-14', 5, '1-0', 14),
 ('2022-10-14', 3, '0-1', 5),
 
--- table B(lượt đi + lượt về)
+-- table B(first leg + return leg)
 ('2022-10-08', 9, '0-1', 7),
 ('2022-10-08', 2, '1-0', 5),
 ('2022-10-09', 15, '0-1', 9),
@@ -40,7 +41,7 @@ values
 ('2022-10-15', 15, '0-1', 7),
 ('2022-10-15', 2, '0-1', 7),
 
--- table C(lượt đi + lượt về)
+-- table C(first leg + return leg)
 ('2022-10-09', 10, '1-0', 8),
 ('2022-10-09', 1, '1-0', 17),
 ('2022-10-10', 17, '0-1', 10),
@@ -54,7 +55,7 @@ values
 ('2022-10-16', 1, '1-0', 10),
 ('2022-10-16', 1, '1-0', 8),
 
--- table D(lượt đi + lượt về)
+-- table D(first leg + return leg)
 ('2022-10-08', 18, '1-0', 13),
 ('2022-10-08', 6, '0-1', 4),
 ('2022-10-10', 13, '0-1', 6),
@@ -68,15 +69,15 @@ values
 ('2022-10-17', 18, '0-1', 4),
 ('2022-10-17', 4, '0-1', 6),
 
--- tứ kết
+-- quarterfinals
 ('2022-10-21', 2, '3-0', 10),
 ('2022-10-22', 5, '3-0', 4),
 ('2022-10-23', 6, '3-2', 7),
 ('2022-10-24', 8, '3-2', 3),
 
--- bán kết
+-- semifinal
 ('2022-10-30', 2, '1-3', 5),
 ('2022-10-31', 6, '1-3', 8),
 
--- chung kết
+-- final
 ('2022-11-06', 5, '2-3', 8);
