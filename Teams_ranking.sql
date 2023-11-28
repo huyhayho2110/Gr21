@@ -1,10 +1,10 @@
 CREATE TABLE Teams_ranking (
-  ID_ranking INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  Ranking_position INT,
-  ID_Teams INT,
-  PRIMARY KEY (id),
-  FOREIGN KEY (ID_Teams) REFERENCES Teams_information(ID_Teams)  
-);
+  Ranking_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  Ranking_position INT NOT NULL,
+  Team_ID INT UNSIGNED,
+  FOREIGN KEY (Team_ID) REFERENCES Teams_information(Team_ID),
+  CHECK (Ranking_position >= 1)
+) COMMENT='Table storing ranking information for teams.';
 
 INSERT INTO Teams_ranking (place, ID_Teams) VALUES
 (1,8),
