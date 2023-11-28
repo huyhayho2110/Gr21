@@ -1,12 +1,12 @@
 CREATE TABLE Players_information (
-  ID_players UNSINGED AUTO_INCREMENT PRIMARY KEY,
+  ID_players INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   Name_teams VARCHAR(50) NOT NULL,
-  Name_players VARCHAR (50) NOT NULL,
+  Name_players VARCHAR (255) NOT NULL,
   Position ENUM('Top','Jungle','Middle','ADC','Support'),
-  FOREIGN KEY Name_teams REFERENCES Teams_information (Name_teams)
+  FOREIGN KEY (Name_teams) REFERENCES Teams_information(Name_teams)
 );
 
-INSERT INTO (Name_players, Name_teams, Position)
+INSERT INTO Players_information(Name_players, Name_teams, Position)
 VALUES 
   ('369','JD Gaming','Top'),
   ('Abbedagge','100 Thieves','Middle'),
@@ -43,7 +43,7 @@ VALUES
   ('Jankos','G2 Esports','Jungle'),
   ('Jensen','Cloud9','Middle'),
   ('Jiejie','EDward Gaming','Jungle'),
-  ('jojopyun','Evil Geniuses','Middle'),
+  ('Jojopyun','Evil Geniuses','Middle'),
   ('Juhan','DRX','Jungle'),
   ('Kanavi','JD Gaming','Jungle'),
   ('Kaori','Evil Geniuses','ADC'),
@@ -52,7 +52,7 @@ VALUES
   ('Keria','Telecom 1','Support'),
   ('Kiaya','GAM Esports','Top'),
   ('Kingen','DRX','Top'),
-  ('Knight','Top Esports'),
+  ('Knight','Top Esports', 'Middle'),
   ('Koala','CTBC Flying Oyster','Support'),
   ('Larssen','Rogue','Middle'),
   ('Lehends','Gen.G Esports','Support'),
@@ -88,6 +88,6 @@ VALUES
   ('Xiaohu','Royal Never Give Up','Middle'),
   ('Yagao','JD Gaming','Middle'),
   ('Zeka','DRX','Middle'),
-  ('Zeus','Telecom 1','Top',
+  ('Zeus','Telecom 1','Top'),
   ('Zven','Cloud9','Support')
 ;
