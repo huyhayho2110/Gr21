@@ -1,26 +1,27 @@
-CREATE TABLE champion_stats (
-    id_champion INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name_champion VARCHAR(50) NOT NULL,
-    sum_total INT NOT NULL,
-    win_total INT NOT NULL,
-    lose_total INT NOT NULL,
-    winrate_total DECIMAL(5,2) NOT NULL,
-    pick_rate DECIMAL(5,2) NOT NULL,
-    sum_blue_side INT NULL,
-    win_blue_side INT NULL,
-    lose_blue_side INT NULL,
-    winrate_blue_side DECIMAL(5,2) NULL,
-    sum_red_side INT NULL,
-    win_red_side INT NULL,
-    lose_red_side INT NULL,
-    winrate_red_side DECIMAL(5,2) NULL,
-    sum_bans INT NOT NULL,
-    ban_rate DECIMAL(5,2) NOT NULL,
-    sum_pick_ban INT NOT NULL,
-    pick_ban_rate DECIMAL(5,2) NOT NULL
-);
+CREATE TABLE Champion_stats (
+  Champion_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  Name_champion VARCHAR(50) UNIQUE NOT NULL,
+  Total_stats INT NOT NULL,
+  Win_stats INT NOT NULL,
+  Lose_stats INT NOT NULL,
+  Winrate_stats VARCHAR(10) NOT NULL,
+  Pick_rate VARCHAR(10) NOT NULL,
+  Sum_blue_side INT NULL,
+  Win_blue_side INT NULL,
+  Lose_blue_side INT NULL,
+  Winrate_blue_side DECIMAL(5,2) NULL,
+  Sum_red_side INT NULL,
+  Win_red_side INT NULL,
+  Lose_red_side INT NULL,
+  Winrate_red_side DECIMAL(5,2) NULL,
+  Sum_bans INT NOT NULL,
+  Ban_rate VARCHAR(10) NOT NULL,
+  Sum_pick_ban INT NOT NULL,
+  Pick_ban_rate VARCHAR (10) NOT NULL,
+  CHECK (Total_stats >= 0 AND Win_stats >= 0 AND Lose_stats >= 0 AND Sum_bans >= 0)
+) COMMENT='Table storing champion statistics.';
 
-INSERT INTO champion_stats (name_champion, sum_total, win_total, lose_total, winrate_total, pick_rate, sum_blue_side, win_blue_side, lose_blue_side, winrate_blue_side, sum_red_side, win_red_side, lose_red_side, winrate_red_side, sum_bans, ban_rate, sum_pick_ban, pick_ban_rate) VALUES
+INSERT INTO champion_stats (name_champion, Total_stats, Win_stats, Lose_stats, Winrate_stats, Pick_rate, Sum_blue_side, Win_blue_side, Lose_blue_side, Winrate_blue_side, Sum_red_side, Win_red_side, Lose_red_side, Winrate_red_side, Sum_bans, Ban_rate, Sum_pick_ban, Pick_ban_rate) VALUES
 ('Sylas', 50, 33, 17, 66.00, 39.37, 28, 21, 7, 75.00, 22, 12, 10, 54.55, 49, 38.58, 99, 77.95),
 ('Sejuani', 49, 24, 25, 48.98, 38.58, 23, 12, 11, 52.17, 26, 12, 14, 46.15, 57, 44.88, 106, 83.46),
 ('Azir', 48, 24, 24, 50.00, 37.80, 27, 14, 13, 51.85, 21, 10, 11, 47.62, 43, 33.86, 91, 71.65),
