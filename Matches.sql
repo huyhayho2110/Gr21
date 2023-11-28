@@ -10,9 +10,7 @@ CREATE TABLE Matches (
   FOREIGN KEY (Location) REFERENCES Tournament(Location)
 ) COMMENT='Table storing information about matches.';
 INSERT INTO Matches (Date, ID_team1, Result, ID_team2)
-
-INSERT INTO Matches (Date, ID_team1, Result, ID_team2, Location)
-values
+VALUES
 -- table A (first leg + return leg)
 ('2022-10-08', 14, '0-1', 11),
 ('2022-10-08', 5, '1-0', 3),
