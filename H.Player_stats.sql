@@ -26,5 +26,5 @@ CREATE TABLE player_stats (
     Control_wards_per_minute DECIMAL(5,2) NOT NULL,
     Wards_cleared_per_minute DECIMAL(5,2) NOT NULL,
     FOREIGN KEY (Player_ID) REFERENCES Players_information(Player_ID)
-);
+)COMMENT='Table storing information about players status.';
 
