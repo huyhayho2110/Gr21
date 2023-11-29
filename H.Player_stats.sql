@@ -24,7 +24,7 @@ CREATE TABLE player_stats (
     Neutral_objectives_stolen INT NOT NULL,
     Wards_per_minute DECIMAL(5,2) NOT NULL,
     Control_wards_per_minute DECIMAL(5,2) NOT NULL,
-    Wards_cleared_per_minute DECIMAL(5,2) NOT NULL
+    Wards_cleared_per_minute DECIMAL(5,2) NOT NULL,
     FOREIGN KEY (Player_ID) REFERENCES Players_information(Player_ID)
 );
 
