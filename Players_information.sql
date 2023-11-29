@@ -2,12 +2,12 @@ CREATE TABLE Players_information (
   Player_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   Name_team VARCHAR(50) NOT NULL,
   Name_player VARCHAR (255) NOT NULL,
-  Position ENUM('Top','Jungle','Middle','ADC','Support'),
+  Position_player ENUM('Top','Jungle','Middle','ADC','Support'),
   FOREIGN KEY (Name_team) REFERENCES Teams_information(Name_team),
   CONSTRAINT UQ_Team_Player UNIQUE (Player_ID, Name_player)
 ) COMMENT='Table storing information about players.';
 
-INSERT INTO Players_information(Name_player, Name_team, Position)
+INSERT INTO Players_information(Name_player, Name_team, Position_player)
 VALUES 
   ('369','JD Gaming','Top'),
   ('Abbedagge','100 Thieves','Middle'),
