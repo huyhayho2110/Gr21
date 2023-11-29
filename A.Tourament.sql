@@ -13,7 +13,7 @@ CREATE TABLE Tournament (
   Location VARCHAR(255) NOT NULL,
   Total_prize INT NOT NULL,
   Unit_money ENUM('USD') NOT NULL,
-  INDEX idx_Location (Location)
+  INDEX idx_Unit_money (Unit_money)
 ) COMMENT='Table storing information about tournaments.';
 
 
