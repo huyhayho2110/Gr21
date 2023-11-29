@@ -25,7 +25,7 @@ CREATE TABLE player_stats (
     Wards_per_minute DECIMAL(5,2) NOT NULL,
     Control_wards_per_minute DECIMAL(5,2) NOT NULL,
     Wards_cleared_per_minute DECIMAL(5,2) NOT NULL
-    FOREIGN KEY (Player_ID) REFERENCES Players_information(Player_ID) ON DELETE SET NULL
+    FOREIGN KEY (Player_ID) REFERENCES Players_information(Player_ID)
 );
 
 INSERT INTO player_stats (Gold_per_minute, Winrate, Counter_pickrate, Kills, Deaths, Assists, Kda, Kp, Kill_share, Share_team_deaths, First_blood_rate, Gold_diff_10, Xp_diff_10, Cs_diff_10, Cspm, Share_team_deaths_15, Damage_per_minute, Share_damage, Share_team_damage_15, Average_gold_per_minute, Gold_share, Neutral_objectives_stolen, Wards_per_minute, Control_wards_per_minute, Wards_cleared_per_minute) VALUES
