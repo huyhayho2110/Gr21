@@ -29,7 +29,7 @@ CREATE TABLE Teams_stats (
     Control_wards_per_minute DECIMAL(5,2) NOT NULL,
     Wards_cleared_per_minute DECIMAL(5,2) NOT NULL,
     FOREIGN KEY (Team_ID) REFERENCES Teams_information(Team_ID)
-);
+)COMMENT='Table storing statistics about the teams.';
 
 
 
