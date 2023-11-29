@@ -17,5 +17,4 @@ CREATE TABLE Tournament (
   INDEX idx_Location (Location)
 ) COMMENT='Table storing information about tournaments.';
 
-INSERT INTO Tournament (Name_tournament, Date_start, Date_end, Location, Total_prize, Unit_money)
-VALUES ('League of legends: Worlds championship 2022', '2022-09-30', '2022-11-06', 'New York', 2225000, 'USD');
+
