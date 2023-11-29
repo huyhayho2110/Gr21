@@ -15,5 +15,3 @@ CREATE TABLE Tournament (
   Unit_money ENUM('USD') NOT NULL,
   INDEX idx_Unit_money (Unit_money)
 ) COMMENT='Table storing information about tournaments.';
-
-
