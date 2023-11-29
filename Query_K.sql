@@ -6,4 +6,4 @@ JOIN Teams_information AS team2 ON Game_results.ID_team_losing = team2.Team_ID
 WHERE DATE BETWEEN '2022-10-21' AND '2022-11-01'
 ORDER BY Matches.Date ASC;
 
--- Display information about the matchs and the results between 2022-10-21 to 2022-11-01 in ascending order.
+-- Display information about the matches and the results between 2022-10-21 to 2022-11-01 in ascending order.
