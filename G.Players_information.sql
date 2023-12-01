@@ -4,8 +4,7 @@ CREATE TABLE Players_information (
   Name_player VARCHAR (255) NOT NULL,
   Lane ENUM('Top','Jungle','Middle','ADC','Support'),
   Coach_ID INT UNSIGNED,
-  FOREIGN KEY (Name_team) REFERENCES Teams_information(Name_team),
-  CONSTRAINT UQ_Team_Player UNIQUE (Player_ID, Name_player)
+  FOREIGN KEY (Name_team) REFERENCES Teams_information(Name_team)
 ) COMMENT='Table storing information about players.';
 
 
