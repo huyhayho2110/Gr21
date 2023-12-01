@@ -5,7 +5,6 @@ CREATE TABLE Players_information (
   Lane ENUM('Top','Jungle','Middle','ADC','Support'),
   Coach_ID INT UNSIGNED,
   FOREIGN KEY (Name_team) REFERENCES Teams_information(Name_team),
-  FOREIGN KEY (Coach_ID) REFERENCES Coaches(Coach_ID) ON DELETE SET NULL,
   CONSTRAINT UQ_Team_Player UNIQUE (Player_ID, Name_player)
 ) COMMENT='Table storing information about players.';
 
