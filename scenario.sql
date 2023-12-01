@@ -55,3 +55,8 @@ WHERE Player_ID IN (
 		WHERE AREA LIKE '%LCK%'
 	)
 );
+-- Game developers want to increase Prize of 
+-- 24th place to 18,000$ , so you just update your DBSM 
+UPDATE Prize_structure
+SET Prize_money = 18000
+WHERE Ranking = 24;
