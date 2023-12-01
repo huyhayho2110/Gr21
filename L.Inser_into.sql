@@ -28,10 +28,6 @@ VALUES
 (23,'16.68750', '0.75', 'USD'),
 (24,'16.68750', '0.75', 'USD');
 
-
-INSERT INTO Peek_viewership (Name_tournament, Peek_viewers, View_english_streams, View_twitch_streams, Average_viewers, Hours_watched)
-VALUES 
-('League of legends: Worlds championship 2022', 5147701, 163449, 2873711, 987437, 141943967);
 INSERT INTO Teams_information(Team_ID, Name_Team, Short_Name, AREA, Country)
 VALUE 
 (1, 'Top Esports', 'TES', 'LPL', 'China'), 
