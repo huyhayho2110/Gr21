@@ -6,7 +6,7 @@ CREATE TABLE teams_stats (
     average_game_duration DECIMAL(4,1) NOT NULL,
     kills INT NOT NULL,
     deaths INT NOT NULL,
-    kd DECIMAL(4,2) NOT NULL,
+    kda DECIMAL(4,2) NOT NULL,
     combined_kills_per_minute DECIMAL(4,2) NOT NULL,
     gold_percent_rating DECIMAL(4,2) NOT NULL,
     gold_spent_difference DECIMAL(5,2)NOT NULL,
