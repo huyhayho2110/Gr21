@@ -3,7 +3,6 @@ CREATE TABLE Players_information (
   Name_team VARCHAR(50) NOT NULL,
   Name_player VARCHAR (255) NOT NULL,
   Lane ENUM('Top','Jungle','Middle','ADC','Support'),
-  Coach_ID INT UNSIGNED,
   FOREIGN KEY (Name_team) REFERENCES Teams_information(Name_team)
 ) COMMENT='Table storing information about players.';
 
