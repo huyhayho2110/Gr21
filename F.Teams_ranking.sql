@@ -1,6 +1,5 @@
 CREATE TABLE Teams_ranking (
-  Ranking_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  Ranking INT NOT NULL,
+  Ranking INT NOT NULL PRIMARY KEY,
   Team_ID INT UNSIGNED UNIQUE,
   FOREIGN KEY (Team_ID) REFERENCES Teams_information(Team_ID),
   FOREIGN KEY (Ranking) REFERENCES Prize_structure(Ranking),
