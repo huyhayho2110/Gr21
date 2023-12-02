@@ -1,5 +1,5 @@
 CREATE TABLE stats_champion (
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_champion INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     champion VARCHAR(50) NOT NULL,
     sum_total INT NOT NULL,
     win_total INT NOT NULL,
