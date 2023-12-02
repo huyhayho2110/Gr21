@@ -448,7 +448,59 @@ INSERT INTO Coaches (Coach_name, Team_ID, nick_name) VALUES
 ('Han Gi-hun', 23, 'viviD'),
 ('Daniel Le', 24, 'Dragku');
 
-INSERT INTO Matches (Date, ID_team1, ID_team2, Location)
+INSERT INTO Matches_Playin (Date, ID_team1, ID_team2, Location)
+VALUES
+
+-- round 1
+-- table A
+('2022-09-30', 11, 15, 'Mexico'),
+('2022-09-30', 22, 19, 'Mexico'),
+('2022-09-30', 24, 11, 'Mexico'),
+('2022-09-30', 23, 22, 'Mexico'),
+
+('2022-10-01', 11, 23, 'Mexico'),
+('2022-10-01', 15, 22, 'Mexico'),
+('2022-10-01', 23, 24, 'Mexico'),
+('2022-10-01', 15, 19, 'Mexico'),
+
+('2022-10-02', 22, 11, 'Mexico'),
+('2022-10-02', 19, 23, 'Mexico'),
+('2022-10-02', 15, 24, 'Mexico'),
+('2022-10-02', 24, 19, 'Mexico'),
+
+('2022-10-03', 19, 11, 'Mexico'),
+('2022-10-03', 22, 24, 'Mexico'),
+('2022-10-03', 23, 15, 'Mexico'),
+('2022-10-03', 15, 23, 'Mexico'),
+('2022-10-03', 22, 15, 'Mexico'),
+
+-- table B
+('2022-09-30', 20, 12, 'Mexico'),
+('2022-09-30', 12, 21, 'Mexico'),
+('2022-09-30', 16, 21, 'Mexico'),
+('2022-09-30', 8, 4, 'Mexico'),
+
+('2022-10-01', 16, 20, 'Mexico'),
+('2022-10-01', 8, 16, 'Mexico'),
+('2022-10-01', 12, 4, 'Mexico'),
+('2022-10-01', 21, 8, 'Mexico'),
+
+('2022-10-02', 12, 16, 'Mexico'),
+('2022-10-02', 4, 20, 'Mexico'),
+('2022-10-02', 4, 21, 'Mexico'),
+('2022-10-02', 20, 8, 'Mexico'),
+
+('2022-10-03', 21, 20, 'Mexico'),
+('2022-10-03', 8, 12, 'Mexico'),
+('2022-10-03', 4, 16, 'Mexico'),
+
+-- round 2
+('2022-10-04', 12, 16, 'Mexico'),
+('2022-10-04', 22, 23, 'Mexico'),
+('2022-10-05', 15, 12, 'Mexico'),
+('2022-10-05', 4, 23, 'Mexico');
+
+INSERT INTO Matches_group (Date, ID_team1, ID_team2, Location)
 VALUES
 -- table A (first leg + return leg)
 ('2022-10-08', 14, 11, 'New York'),
@@ -506,6 +558,8 @@ VALUES
 ('2022-10-17', 18, 4, 'New York'),
 ('2022-10-17', 4, 6, 'New York'),
 
+INSERT INTO Matches_Knockout (Date, ID_team1, ID_team2, Location)
+VALUES
 -- quarterfinals
 ('2022-10-21', 2, 10, 'New York'),
 ('2022-10-22', 5, 4, 'New York'),
@@ -513,11 +567,11 @@ VALUES
 ('2022-10-24', 8, 3, 'New York'),
 
 -- semifinal
-('2022-10-30', 2, 5, 'New York'),
-('2022-10-31', 6, 8, 'New York'),
+('2022-10-30', 2, 5, 'Canada'),
+('2022-10-31', 6, 8, 'Canada'),
 
 -- final
-('2022-11-06', 5, 8, 'New York');
+('2022-11-06', 5, 8, 'San Francisco');
 
 INSERT INTO Game_results (ID_match, ID_team_winning, ID_team_losing, Winning_score, Losing_score)
 values
