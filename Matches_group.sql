@@ -1,4 +1,4 @@
-CREATE TABLE Matches_Table (
+CREATE TABLE Matches_group (
   ID_match INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   Date DATE,
   ID_team1 INT UNSIGNED,
@@ -9,7 +9,7 @@ CREATE TABLE Matches_Table (
   FOREIGN KEY (ID_team2) REFERENCES Teams_information(Team_ID)
 ) COMMENT='Table storing information about matches.';
 
-INSERT INTO Matches_Table (Date, ID_team1, ID_team2, Location)
+INSERT INTO Matches_group (Date, ID_team1, ID_team2, Location)
 VALUES
 -- table A (first leg + return leg)
 ('2022-10-08', 14, 11, 'New York'),
