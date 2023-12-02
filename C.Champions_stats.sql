@@ -7,15 +7,9 @@ CREATE TABLE stats_champion (
     winrate_total DECIMAL(5,2) NOT NULL,
     pick_rate DECIMAL(5,2) NOT NULL,
     sum_blue_side INT NULL,
-    win_blue_side INT NULL,
-    lose_blue_side INT NULL,
     winrate_blue_side DECIMAL(5,2) NULL,
     sum_red_side INT NULL,
-    win_red_side INT NULL,
-    lose_red_side INT NULL,
     winrate_red_side DECIMAL(5,2) NULL,
     sum_bans INT NOT NULL,
-    ban_rate DECIMAL(5,2) NOT NULL,
-    sum_pick_ban INT NOT NULL,
-    pick_ban_rate DECIMAL(5,2) NOT NULL
+    ban_rate DECIMAL(5,2) NOT NULL
 );
