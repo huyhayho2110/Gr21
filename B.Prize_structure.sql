@@ -1,6 +1,5 @@
 CREATE TABLE Prize_structure (
-  Prize_structure_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  Ranking INT NOT NULL,
+  Ranking INT NOT NULL PRIMARY KEY,
   Prize_money DECIMAL(10,4) NOT NULL,
   Prize_percentage DECIMAL(4,2) NOT NULL,
   Unit_money ENUM('USD') NOT NULL,
