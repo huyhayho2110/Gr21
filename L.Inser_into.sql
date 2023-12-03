@@ -448,7 +448,7 @@ INSERT INTO Coaches (Coach_name, Team_ID, nick_name) VALUES
 ('Han Gi-hun', 23, 'viviD'),
 ('Daniel Le', 24, 'Dragku');
 
-INSERT INTO Matches_Playin (Date, ID_team1, ID_team2, Location)
+INSERT INTO Matches (Date, ID_team1, ID_team2, Location)
 VALUES
 
 -- round 1
@@ -498,10 +498,8 @@ VALUES
 ('2022-10-04', 12, 16, 'Mexico'),
 ('2022-10-04', 22, 23, 'Mexico'),
 ('2022-10-05', 15, 12, 'Mexico'),
-('2022-10-05', 4, 23, 'Mexico');
-
-INSERT INTO Matches_group (Date, ID_team1, ID_team2, Location)
-VALUES
+('2022-10-05', 4, 23, 'Mexico'),
+ 
 -- table A (first leg + return leg)
 ('2022-10-08', 14, 11, 'New York'),
 ('2022-10-08', 5, 3, 'New York'),
@@ -558,8 +556,6 @@ VALUES
 ('2022-10-17', 18, 4, 'New York'),
 ('2022-10-17', 4, 6, 'New York'),
 
-INSERT INTO Matches_Knockout (Date, ID_team1, ID_team2, Location)
-VALUES
 -- quarterfinals
 ('2022-10-21', 2, 10, 'New York'),
 ('2022-10-22', 5, 4, 'New York'),
