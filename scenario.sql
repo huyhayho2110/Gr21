@@ -1,10 +1,14 @@
--- In this scenario, you are a deginer who alter the power
--- of champions. Some champions in the tournamennt are too strong
--- compared to other champions. You need to use the DBSM that stores
--- the statiѕtic of champions to find that dominated champions.
-SELECT champion FROM stats_champion
-WHERE pick_ban_rate > 60
-ORDER BY pick_ban_rate,winrate_total,sum_total LIMIT 15;
+-- You are the coach of the JDG team participating in the 2022 tournament and your team finished third.
+-- After analysis, you notice that the team lost the match mainly due to the poor performance of the Bottom pair (ADC and Support).
+-- You decide to change your current ADC and look for a new player for this position.
+
+SELECT Name_player, Lane, Winrate, Kills, Deaths, Assists, Kda, Name_team
+FROM Players_information
+JOIN player_stats ON Players_information.Player_ID = player_stats.Player_ID
+WHERE Lane IN ('ADC', 'Support')  -- Assuming 'Support' refers to the Support role
+ORDER BY Winrate DESC, Kda DESC
+LIMIT 10;  
+
 
 -- In the problem, you are a head coach of JDG team 
 -- that eliminated at 3th place in 2022 tournament, you know 
