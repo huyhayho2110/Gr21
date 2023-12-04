@@ -9,20 +9,6 @@ WHERE Lane IN ('ADC', 'Support')  -- Assuming 'Support' refers to the Support ro
 ORDER BY Winrate DESC, Kda DESC
 LIMIT 10;  
 
-
--- In the problem, you are a head coach of JDG team 
--- that eliminated at 3th place in 2022 tournament, you know 
--- that your team lose because your Bottom (ADC and Support) 
--- played not well. You want to replace current ADC 
--- and find new player for that positions. You have the
--- DBSM, use it to query and find desired players.
-
-SELECT Name_player, Name_team FROM Players_information
-FULL JOIN player_stats
-ON player_stats.Player_ID = Players_information.Player_ID
-WHERE Deaths < 25 AND Lane = 'ADC'
-ORDER BY Cs_diff_10,Share_damage,Deaths DESC;
-
 -- In this problem, you are a new player of LOL,
 -- you know that Faker has many fan over the world
 -- you are curious person and you want to know his performance
@@ -64,3 +50,42 @@ WHERE Player_ID IN (
 UPDATE Prize_structure
 SET Prize_money = 18000
 WHERE Ranking = 24;
+
+-- Search for 10 players with the lowest KDA and Winrate
+-- The publisher will put it under suspicion of price fixing
+SELECT
+    Players_information.Name_player,
+    Players_information.Lane,
+    player_stats.Winrate,
+    player_stats.Kda,
+    Teams_information.Name_team
+FROM
+    Players_information
+JOIN
+    player_stats ON Players_information.Player_ID = player_stats.Player_ID
+JOIN
+    Teams_information ON Players_information.Name_team = Teams_information.Name_team
+WHERE
+    player_stats.Winrate <= 40  
+    AND player_stats.Kda <= 2.0 
+ORDER BY
+    player_stats.Winrate ASC, player_stats.Kda ASC
+LIMIT 10;
+
+-- Search for MVP of the entire tournament based on KDA and Winrate ratio
+SELECT
+    PI.Name_player,
+    PI.Lane,
+    PS.Winrate,
+    PS.Kda,
+    TI.Name_team
+FROM
+    Players_information PI
+JOIN
+    player_stats PS ON PI.Player_ID = PS.Player_ID
+JOIN
+    Teams_information TI ON PI.Name_team = TI.Name_team
+ORDER BY
+    (PS.Kda + PS.Winrate) DESC
+LIMIT 1;
+
