@@ -116,3 +116,24 @@ FROM
 ORDER BY
     MLP.MidLaneAvgKda DESC, MLP.MidLaneAvgWinrate DESC
 LIMIT 10;
+
+-- Find and remove 20 players with negative behavior based on their stats
+DELETE FROM Players_information
+WHERE Player_ID IN (
+    SELECT Player_ID
+    FROM (
+        SELECT PI.Player_ID
+        FROM Players_information PI
+        JOIN player_stats PS ON PI.Player_ID = PS.Player_ID
+        WHERE PS.Winrate < 40  
+        ORDER BY PS.Winrate ASC, PS.Kda ASC
+        LIMIT 20
+    ) AS Subquery
+);
+
+-- Update information about prizes for teams with random numbers
+UPDATE Prize_structure AS ps
+SET
+    ps.Prize_money = ROUND(ps.Prize_money * 1.1 + RAND() * 10000, 4),  -- Round the new value to a maximum of 4 digits after the decimal point
+    ps.Prize_percentage = ROUND(ps.Prize_percentage * 1.05 + RAND() * 5, 2)  -- Round the new value to a maximum of 2 digits after the decimal point
+WHERE ps.Ranking > 10;
