@@ -89,3 +89,30 @@ ORDER BY
     (PS.Kda + PS.Winrate) DESC
 LIMIT 1;
 
+-- The coaching staff of each team wants to find the 10 best mid players to buy during next year's player transfer
+
+WITH MidLanePerformance AS (
+    SELECT
+        TI.Name_team,
+        AVG(PS.Winrate) AS MidLaneAvgWinrate,
+        AVG(PS.Kda) AS MidLaneAvgKda,
+        COUNT(DISTINCT PI.Player_ID) AS NumMidLanePlayers
+    FROM
+        Teams_information TI
+    JOIN
+        Players_information PI ON TI.Name_team = PI.Name_team AND PI.Lane = 'Middle'
+    JOIN
+        player_stats PS ON PI.Player_ID = PS.Player_ID
+    GROUP BY
+        TI.Name_team
+)
+SELECT
+    MLP.Name_team,
+    MLP.MidLaneAvgWinrate,
+    MLP.MidLaneAvgKda,
+    MLP.NumMidLanePlayers
+FROM
+    MidLanePerformance MLP
+ORDER BY
+    MLP.MidLaneAvgKda DESC, MLP.MidLaneAvgWinrate DESC
+LIMIT 10;
